@@ -1,7 +1,9 @@
 #ifndef _test_h_
 #define _test_h_
 
-
+/*
+利用汇编指令求取x^y，该部分有汇编指令，其汇编的格式遵从vs2012的方式。如果使用devC++或其他编译器请重写此部分代码
+*/
 double y_log_2_x(double x, double y)
 {
 	double ret1;
