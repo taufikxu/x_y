@@ -17,6 +17,11 @@ double y_log_2_x(double x, double y)
 
 double pow_x_y(double x, double y)
 {
+	if (y == 0)
+		return 1;
+	if (x == 0)
+		return 0;
+
 	double y_log_x = y_log_2_x(x, y);
 	long temp = long(y_log_x);
 	double temp_d = y_log_x - temp;

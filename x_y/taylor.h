@@ -163,4 +163,16 @@ double int_ln_x(double x, double error = 1e-13) //利用积分求解ln(x)
 	
 }
 
+double taylor_x_y(double x, double y)
+{
+	if (y == 0)
+		return 1;
+	if (x == 0)
+		return 0;
+
+	double power = y*taylor_ln_x_fast(x);
+	double temp = power - y*log(x);
+	return taylor_exp_x(power);
+}
+
 #endif

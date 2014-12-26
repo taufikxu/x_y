@@ -27,6 +27,11 @@ double newton_ln_x(double x, double error = 1e-13)//利用牛顿迭代法求解ln(x)
 
 double newton_x_y(double x, double y, double error = 1e-13)//利用牛顿迭代法求解x^y
 {
+	if (y == 0)
+		return 1;
+	if (x == 0)
+		return 0;
+
 	long inter = long(y);
 	y -= inter;
 

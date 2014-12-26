@@ -6,8 +6,13 @@
 
 //利用微分方程求解
 
-double OdeItera(double x, double y, double error = 1e-10)
+double OdeItera(double x, double y, double error = 1e-11)
 {
+	if (y == 0)
+		return 1;
+	if (x == 0)
+		return 0;
+
 	error /= 100;
 	double ln_x = taylor_ln_x_fast(x);
 	int store_y = int(y);
